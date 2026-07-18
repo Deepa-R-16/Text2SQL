@@ -17,8 +17,7 @@ function App() {
   const [stats, setStats] = useState(null);
 
   useEffect(() => {
-  axios
-    .get("http://127.0.0.1:8000/stats")
+ axios.get("https://text2sql-a5mj.onrender.com/stats")
     .then((res) => {
       setStats(res.data);
     })
@@ -33,7 +32,7 @@ function App() {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/ask", {
+      const res = await axios.post("https://text2sql-a5mj.onrender.com/ask", {
   question: question,
 });
 
@@ -72,7 +71,7 @@ setQuestion("");
   try {
 
     const res = await axios.post(
-      "http://127.0.0.1:8000/ask",
+  "https://text2sql-a5mj.onrender.com/ask",
       {
         question: exampleQuestion
       }
