@@ -1,7 +1,8 @@
+import SearchBox from "./components/SearchBox";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
 import Header from "./components/Header";
-import { FaSearch } from "react-icons/fa";
+
 import * as XLSX from "xlsx";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -166,14 +167,23 @@ function downloadExcel() {
 
   XLSX.writeFile(workbook, "query_result.xlsx");
 }
-function copySQL() {
-  navigator.clipboard.writeText(response.generated_sql);
-  alert("SQL copied successfully!");
+async function copySQL() {
+
+await navigator.clipboard.writeText(
+  response.generated_sql
+);
+
+alert("SQL copied successfully!");
+
 }
 
   return (
-    <div className={darkMode ? "container dark" : "container"}>
-      <Header />
+<div className={darkMode ? "dark" : ""}>
+
+<div className="container">      <Header
+  darkMode={darkMode}
+  setDarkMode={setDarkMode}
+/>
       <div className="hero">
 
 <h2>
@@ -191,12 +201,7 @@ using Gemini AI and retrieve intelligent database insights.
 
 
 
-      <button
-  onClick={() => setDarkMode(!darkMode)}
-  style={{ marginBottom: "20px" }}
->
-  {darkMode ? "☀ Light Mode" : "🌙 Dark Mode"}
-</button>
+      
       {stats && (
   <div className="dashboard">
 
@@ -228,86 +233,22 @@ using Gemini AI and retrieve intelligent database insights.
 
       <hr />
 
-      <div className="aiBox">
-
-<h2>
-💬 Ask your database anything
-</h2>
-
-<p>
-Try examples:
-</p>
-
-<div className="examples">
-
-
-<button
-onClick={() =>
-runExample("Show all female users")
-}
->
-Show all female users
-</button>
-
-
-<button
-onClick={() =>
-runExample("Show all products")
-}
->
-Show all products
-</button>
-
-
-<button
-onClick={() =>
-runExample("Show total number of orders")
-}
->
-Total orders
-</button>
-
-
-</div>
-
-
-<input
-  type="text"
-  value={question}
-  onChange={(e)=>setQuestion(e.target.value)}
-  onKeyDown={(e)=>{
-    if(e.key==="Enter"){
-      askAI();
-    }
-  }}
-  placeholder="Ask your database question..."
-  className="inputBox"
+      <SearchBox
+  question={question}
+  setQuestion={setQuestion}
+  askAI={askAI}
+  runExample={runExample}
+  loading={loading}
 />
-
-</div>
-
-      <br />
-      <br />
-
-      <button
-  onClick={askAI}
-  disabled={loading}
-  className="button"
->
-  <FaSearch style={{ marginRight: "8px" }} />
-  {loading ? "Thinking..." : "Ask AI"}
-</button>
 
       <br />
       <br />
 
       {loading && (
-        <h3 className="loading">
-          <div className="loading">
-🤖 Gemini is Thinking...
-</div>
-        </h3>
-      )}
+  <div className="loading">
+    🤖 Gemini is Thinking...
+  </div>
+)}
       {history.length > 0 && (
 <div className="card">
 
@@ -460,16 +401,13 @@ style={{marginBottom:"15px"}}
 
       <hr />
 
-<p
-  style={{
-    textAlign: "center",
-    color: "gray",
-    marginTop: "20px"
-  }}
->
+<p className="footer">
   AI Text-to-SQL Assistant | Developed using React, FastAPI, PostgreSQL & Gemini AI
 </p>
-    </div>
+
+</div>
+
+</div>
   );
 }
 
