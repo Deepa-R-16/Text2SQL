@@ -1,15 +1,16 @@
 from schema import get_schema
-
 from google import genai
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
 
-client = genai.Client(
-    api_key=os.getenv("GEMINI_API_KEY")
-)
+api_key = os.getenv("GEMINI_API_KEY")
 
+print("API KEY FOUND:", api_key is not None)
+print("API KEY VALUE:", repr(api_key))
+
+client = genai.Client(api_key=api_key)
 
 def generate_sql(question):
 
