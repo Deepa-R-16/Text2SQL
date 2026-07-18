@@ -1,10 +1,15 @@
-
-
+# Python
 venv/
-.env
 __pycache__/
 *.pyc
-query_result.csv
+.env
 
-documents.pkl
-faiss_index.bin
+# React
+node_modules/
+dist/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
