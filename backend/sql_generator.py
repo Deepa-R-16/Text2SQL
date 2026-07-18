@@ -30,6 +30,8 @@ Rules:
 - Do not add explanation.
 - Use PostgreSQL syntax.
 - Use correct table relationships when required.
+- For text comparisons, always use ILIKE instead of =.
+- Never assume capitalization of string values.
 
 User question:
 {question}
