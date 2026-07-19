@@ -399,31 +399,38 @@ Returns all female users.
 
 ## Home Page
 
-(Add Screenshot)
+<img width="1890" height="906" alt="Screenshot 2026-07-18 221050" src="https://github.com/user-attachments/assets/e65cbd26-d347-4710-a3fc-e530040a7490" />
+
 
 ---
 
 ## Generated SQL
 
-(Add Screenshot)
+<img width="1042" height="493" alt="Screenshot 2026-07-19 115509" src="https://github.com/user-attachments/assets/c89fdf2b-ee28-46cf-a165-096bdb7a04df" />
 
 ---
 
 ## Query Result
 
-(Add Screenshot)
+<img width="683" height="831" alt="Screenshot 2026-07-19 115542" src="https://github.com/user-attachments/assets/0fcf8a25-3c19-48e0-bf15-d602181fbba5" />
 
 ---
 
 ## AI Explanation
 
-(Add Screenshot)
+<img width="657" height="197" alt="Screenshot 2026-07-19 115605" src="https://github.com/user-attachments/assets/c517df32-e866-4566-9b57-7d80686aa3af" />
+
 
 ---
 
 ## Swagger API
 
-(Add Screenshot)
+<img width="1890" height="890" alt="Screenshot 2026-07-18 220804" src="https://github.com/user-attachments/assets/0aed14a4-e8a0-4d9b-913f-26f09c1ff541" />
+
+<img width="1902" height="880" alt="Screenshot 2026-07-18 220816" src="https://github.com/user-attachments/assets/a2b0f0e6-727c-4cd0-9072-892eaa6dad3c" />
+
+<img width="1882" height="632" alt="Screenshot 2026-07-18 220824" src="https://github.com/user-attachments/assets/69c3cf8f-2ea9-4dde-b476-f00dcd94737c" />
+
 
 ---
 
